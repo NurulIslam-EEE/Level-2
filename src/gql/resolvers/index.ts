@@ -8,5 +8,10 @@ export const resolvers = {
       const result = db.products.find((pd) => pd.id === args.productId);
       return result;
     },
+    categories: () => db.categories,
+    category: (parent: any, args: { categoryId: string }, context: any) => {
+      const res = db.categories.find((id) => id.id === args.categoryId);
+      return res;
+    },
   },
 };

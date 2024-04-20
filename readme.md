@@ -31,3 +31,16 @@ image
 }
 
 67-5
+
+query Products {
+products{
+name
+}
+}
+
+67-6
+query Categories($categoryId: ID!) {
+category(categoryId: $categoryId){
+name
+}
+}
