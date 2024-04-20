@@ -21,5 +21,17 @@ export const resolvers = {
       );
       return res;
     },
+    reviews: (parent, args, context) => {
+      return db.reviews.filter((review) => review.productId === parent.id);
+    },
+  },
+  Category: {
+    products: (parent, args, context) => {
+      const res = db.products.filter(
+        (product) => product.categoryId === parent.id
+      );
+
+      return res;
+    },
   },
 };

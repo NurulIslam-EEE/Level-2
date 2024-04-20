@@ -46,3 +46,53 @@ name
 }
 
 67.7
+
+query ProductsWithCategory {
+products{
+name
+category{
+name
+}
+}
+}
+
+67.8
+query CategoryWithProducts {
+categories{
+name
+products{
+name
+}
+}
+}
+
+query SingleCat($categoryId: ID!) {
+category(categoryId: $categoryId) {
+name
+products{
+name
+}
+}
+}
+
+67.9
+
+query Products {
+products {
+name
+reviews {
+review
+rating
+}
+}
+}
+
+query SingleProduct($productId: ID!) {
+product(productId: $productId) {
+name
+reviews {
+review
+rating
+}
+}
+}
