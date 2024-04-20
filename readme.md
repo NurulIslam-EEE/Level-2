@@ -44,3 +44,5 @@ category(categoryId: $categoryId){
 name
 }
 }
+
+67.7
